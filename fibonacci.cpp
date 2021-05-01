@@ -8,19 +8,19 @@ int main()
 {
 	std::cout << "Fibonacci calculator by webbgamers:\n";
 
-	fibonacci(0, 1, 0);
+	int iterations = fibonacci(0, 1, 0);
+	std::cout << "Integer overflow reached at " << iterations << " iterations.";
 
 	return 0;
 }
 
-void fibonacci(unsigned long long int before, unsigned long long int now, int iterations)
+int fibonacci(unsigned long long int before, unsigned long long int now, int iterations)
 {
 	std::cout << iterations << ") " << now << "\n";
 	if (now < before)
 	{
-		std::cout << "Integer overflow reached at " << iterations << " iterations.";
-		return;
+		return iterations;
 	}
 	iterations++;
-	fibonacci(now, before + now, iterations);
+	return fibonacci(now, before + now, iterations);
 }

@@ -9,7 +9,7 @@ int main()
 	std::cout << "Fibonacci calculator by webbgamers:\n";
 
 	int iterations = fibonacci(0, 1, 0);
-	std::cout << "Integer overflow reached at " << iterations << " iterations.";
+	std::cout << "Integer overflow reached at " << iterations << " iterations.\n";
 
 	return 0;
 }
